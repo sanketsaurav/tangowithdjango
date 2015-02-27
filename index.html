@@ -1,0 +1,300 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Tango With Django</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Tango With Django</h1>
+		<p>By <a href="http://twitter.com/sanketsaurav">@sanketsaurav</a>, Co-founder, DoSelect</p>
+	</header>
+	<section class="slide cover" id="Cover"><div>
+		<h2>Tango With Django</h2>
+		<p>
+		By <a href="http://www.sanketsaurav.com">Sanket Saurav</a>
+		<br>Co-founder, DoSelect	
+		</p>
+		<img src="pictures/cover.jpg" alt="">
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+			-->
+		<style>
+			#Cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:65px;
+			}
+			#Cover p {
+				margin:50px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-size:20px;
+				line-height: 1.5;
+			}
+			#Cover p a {
+				color:#27ae60;
+			}
+		</style>
+	</div></section>
+
+	<section class="slide" id="intro"><div>
+		<style>
+			#intro #photo {
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				height: 640px;
+			}
+			#intro.slide:after {
+				display: none !important;
+			}
+		</style>
+		<h2>sanket.__doc__</h2>
+		<ul>
+			<li>Part designer, part hacker, full-time geek</li>
+			<li>Co-founder, CTO at <strong>DoSelect</strong></li>
+			<li>Have spoken at more than 50 events across<br> the country</li>
+			<li>Active volunteer at India's Python community</li>
+			<li>Frontman of Quantum Chaos, an alternative <br>rock band</li>
+		</ul>
+		<img src="pictures/picture.jpg" alt="Sanket Saurav" id="photo">
+		</div>
+	</section>
+
+	<section class="slide cover" id="Picture"><div>
+			<img src="pictures/django.jpg" alt="Django">
+		</div></section>
+
+	<section class="slide"><div>
+		<h2>What is Django?</h2>
+		<figure>
+			<blockquote>
+				<p>Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of Web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source.</p>
+			</blockquote>
+			<figcaption>www.djangoproject.com</figcaption>
+		</figure>
+	</div>
+	</section>
+
+	<section class="slide"><div>
+		<h2>What is Django?</h2>
+		<ul>
+			<li><strong>High-level</strong> Python <strong>web-framework</strong></li>
+			<li>Lets you create web applications quickly and with less code</li>
+			<li><strong>Models</strong> - Object-relation mapping to interact with a database</li>
+			<li><strong>Templates</strong> - Django templating engine to render HTML</li>
+			<li><strong>Views</strong> - Python functions for request in / request out</li>
+			<li><strong>URL patterns</strong> - Regular expressions to define paths</li>
+		</ul>
+	</div>
+	</section>
+
+	<section class="slide"><div>
+		<h2>What is a web-framework?</h2>
+		<ul>
+			<li>Lets you build "web-enabled" applications</li>
+			<li>Provides the groundwork for common stuff every application needs</li>
+			<li>You need to write the code in a "particular manner" a.k.a the "framework"</li>
+			<li>Makes your life easier - lets you focus on the app</li>
+		</ul>
+	</div>
+	</section>
+
+	<section class="slide"><div>
+		<h2>How do web applications work?</h2>
+		<ol>
+			<li>You open up a browser, enter a URL</li>
+			<li>Your browser figures out which "host" it should send the request to</li>
+			<li>The browser actually requests the "resource" you have requested</li>
+			<li>The web application on the host receives the request</li>
+			<li>It sends back whatever you have requested (if possible)</li>
+		</ol>
+	</div>
+	</section>
+
+	<section class="slide cover" id="webapps"><div>
+	<h2>How do web applications work?</h2>
+			<img src="pictures/webapps.jpg" alt="Django">
+		</div></section>
+
+	<section class="slide cover" id="http"><div>
+	<h2>How do web applications talk?</h2>
+			<img src="pictures/http.jpg" alt="Django">
+		</div></section>
+
+	<section class="slide shout"><div>
+		<h2>Let's tango!</h2>
+	</div>
+	</section>
+
+	<section class="slide"><div>
+		<h2>Install virtualenvwrapper</h2>
+		<ol>
+			<li>Install virtualenvwrapper with pip</li>
+<pre><code>$ sudo pip install virtualenvwrapper</code></pre>
+			<li>Add it to your shell startup</li>
+<pre><code>export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh</code></pre>
+		<li>Reload your sehll startup file</li>
+<pre><code>$ source ~/.bashrc</code></pre>
+		</ol>
+	</div>
+	</section>
+
+		<section class="slide"><div>
+			<h2>Bootstrap Django</h2>
+			<ol>
+				<li>Create a new virtualenv</li>
+	<pre><code>$ mkvirtualenv tango</code></pre>
+				<li>Install Django</li>
+	<pre><code>$ pip install django</code></pre>
+			<li>Create a new project</li>
+	<pre><code>$ django-admin.py startproject tango</code></pre>
+			</ol>
+		</div>
+		</section>
+
+		<section class="slide"><div>
+			<h2>Create an app</h2>
+			<ol>
+				<li>Create a new app</li>
+	<pre><code>$ python manage.py startapp blog</code></pre>
+			</ol>
+		</div>
+		</section>
+
+	<!-- <section class="slide"><div>
+		<h2>Status Codes</h2>
+		<ul>
+			<li><strong>1xx</strong> - Informational Messages</li>
+			<li><strong>2xx</strong> - Success</li>
+			<li><strong>3xx</strong> - Redirection</li>
+			<li><strong>4xx</strong> - Client Error ("You messed up!")</li>
+			<li><strong>5xx</strong> - Server Error ("I messed up!")</li>
+		</ul>
+	</div>
+	</section>
+
+	<section class="slide"><div>
+		<h2>Resources</h2>
+		<figure>
+			<blockquote>
+				<p>A resource (R) is a temporary varying membership function M(t), which for time <em>t</em>
+				maps to a set of entities, or values, which are equivalent.</p>
+			</blockquote>
+			<figcaption>Roy Fielding</figcaption>
+		</figure>
+	</div>
+	</section>
+
+	<section class="slide"><div>
+		<h2>Resources</h2>
+		<ul>
+			<li>An abstraction of some entity, or a collection of entities, that we can identify by a name
+				<li>"all quotes created by user 1"</li>
+				<li>"all quotes modified between October 12th, 2014 and October 15th, 2014"</li>
+			</li>
+			<li>On the web, we use Uniform Resource Identifiers (URIs)</li>
+		</ul>
+	</div>
+	</section>
+
+	<section class="slide"><div>
+		<h2>Representations</h2>
+		<ul>
+			<li>In order to interact with a resource, we use a representation of that resource</li>
+			<li>Representations contain <strong>data</strong> and <strong>metadata</strong></li>
+			<li>Resources are <em>abstract</em>, representations are <em>concrete</em></li>
+			<li>Representations are the actual bytes that are transferred between clients and servers, including metadata</li>
+		</ul>
+	</div>
+	</section>
+
+	<section class="slide"><div>
+	<style>
+		pre {
+			font-size: 19px;
+		}
+	</style>
+		<h2>Representations</h2>
+		<pre>
+<code>GET /api/v1/quote/l8rdp
+
+200 OK
+Content-Type: application/json
+{
+	author: "/api/v1/author/albus-dumbledore"
+	created: "Fri, 17 Oct 2014 20:33:19 +0000"
+	quote: "Harry is the best hope we have. Trust him."
+	resource_uri: "/api/v1/quote/l8rdp"
+	uid: "l8rdp"
+}
+</code>
+		</pre>
+		</div>
+	</section>
+
+	<section class="slide"><div>
+		<h2>The Good Parts</h2>
+		<ol>
+			<li>Uses the REST methods and status codes properly</li>
+			<li>Round trippable data
+				<ul>
+					<li>Anything you can <strong>GET</strong>, you can <strong>POST/PUT</strong></li>
+				</ul>
+			</li>
+			<li>Super-flexible serialization
+				<ul>
+					<li>JSON, JSONP, XML, YAML, HTML</li>
+				</ul>
+			</li>
+			<li>Fully HATEOAS compatible</li>
+			<li>Extensibility is a core feature</li>
+		</ol>
+	</div>
+	</section>
+
+	<section class="slide"><div>
+		<h2>HATEOAS?</h2>
+		<ol>
+			<li><strong>H</strong>ypermedia <strong>a</strong>s <strong>t</strong>he <strong>E</strong>ngine <strong>o</strong>f <strong>A</strong>pplication <strong>S</strong>tate</li>
+			<li>The user shouldn't have to know <em>anything in advance</em> about the data</li>
+			<li>Complete explorability and deep-linking of data</li>
+			<li>RESTful interaction is driven by hypermedia, rather than out-of-band information</li>
+			<li>Decouples client and server in a way that allows the server functionality to evolve independently</li>
+		</ol>
+	</div>
+	</section>
+
+	<section class="slide shout"><div>
+		<h2>C R U D</h2>
+	</div>
+	</section>
+
+	<section class="slide shout"><div>
+		<h2>List &amp; Detail</h2>
+	</div>
+	</section>
+
+	<section class="slide"><div>
+		<h2>The Dehydrate Cycle</h2>
+		<ol>
+			<li>Put the data model into a Bundle instance, which is then passed through the various methods.</li>
+			<li>Run through all fields on the Resource, letting each field perform its own dehydrate method on the bundle.</li>
+			<li>While processing each field, look for a dehydrate_<fieldname> method on the Resource. If it’s present, call it with the bundle.</li>
+			<li>Finally, after all fields are processed, if the dehydrate method is present on the Resource, it is called & given the entire bundle.</li>
+		</ol>
+	</div>
+	</section> -->
+
+	<div class="progress"><div></div></div>
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2015 Sanket Saurav -->
+</body>
+</html>
